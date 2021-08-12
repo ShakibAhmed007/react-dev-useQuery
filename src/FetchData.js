@@ -13,7 +13,7 @@ const FetchData = async () => {
           title: data[key].title
         });
       }
-      return res.data;
+      return dataArr;
     })
     .catch(error => {
       console.log(error);
