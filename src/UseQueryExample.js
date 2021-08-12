@@ -22,6 +22,7 @@ const UseQueryExample = () => {
   if (isError) {
     return <span>Error: {error.message}</span>;
   }
+  console.log('data ---', data);
   return <div>{JSON.stringify(data)}</div>;
 };
 
