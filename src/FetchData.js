@@ -5,15 +5,7 @@ const FetchData = async () => {
   const response = await axios
     .get('https://dev-http-default-rtdb.firebaseio.com/test_data.json')
     .then(res => {
-      console.log(res.data);
-      const dataArr = [];
-      for (const key in res.data) {
-        dataArr.push({
-          id: data[key].id,
-          title: data[key].title
-        });
-      }
-      return dataArr;
+      return res.data;
     })
     .catch(error => {
       console.log(error);
